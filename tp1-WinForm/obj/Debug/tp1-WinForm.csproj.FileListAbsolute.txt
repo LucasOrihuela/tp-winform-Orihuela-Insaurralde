@@ -1,0 +1,10 @@
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\bin\Debug\tp1-WinForm.exe.config
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\bin\Debug\tp1-WinForm.exe
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\bin\Debug\tp1-WinForm.pdb
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1-WinForm.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1_WinForm.Form1.resources
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1_WinForm.Properties.Resources.resources
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1-WinForm.csproj.GenerateResource.cache
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1-WinForm.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1-WinForm.exe
+C:\Users\Lucas\source\repos\tp1-WinForm\tp1-WinForm\obj\Debug\tp1-WinForm.pdb
