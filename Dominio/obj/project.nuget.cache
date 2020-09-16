@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vyWgKMgepDtGNeaOlPSYo6nuzCjOTYF2poL/u/wbYUMXbDrsBnWGfCtjEO/wAs3ky9f9JD16zDdmH9j4F9V7Bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas\\Desktop\\ClonadoGIT\\Programacion3\\tp1-WinForm\\Dominio\\Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
