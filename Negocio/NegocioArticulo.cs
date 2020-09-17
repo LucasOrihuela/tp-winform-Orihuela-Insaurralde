@@ -13,42 +13,37 @@ namespace Negocio
 
         public List<Articulo> Listar() 
         {
+
+            //// Cambiar Ruta de Conexion.
+
+            SqlConnection Conexion = new SqlConnection("data source=DESKTOP-819VH7M\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi");
             List<Articulo> Listado = new List<Articulo>();
-            SqlConnection Conexion = new SqlConnection();
             SqlCommand Comando = new SqlCommand();
-            SqlDataReader Leer;
+            SqlDataReader Leeme;
 
             try
             {
-                
-                ///// Cambiar ruta de conexion.
-
-                Conexion.ConnectionString = "data source=DESKTOP-819VH7MF\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "select *from ARTICULOS";
+                Comando.CommandText = "select P.Id, P.Codigo,P.Nombre, P.Descripcion, M.Descripcion[Marca], C.Descripcion[Categoria], P.ImagenUrl,P.Precio from ARTICULOS P, MARCAS M, CATEGORIAS C where P.IdMarca = m.Id AND P.IdCategoria = C.Id";
                 Comando.Connection = Conexion;
                 Conexion.Open();
 
-                Leer = Comando.ExecuteReader();
+                Leeme = Comando.ExecuteReader();
 
-                while (Leer.Read())
+                while (Leeme.Read())
                 {
-                    Articulo Aux = new Articulo();
+                    Articulo Art = new Articulo();
 
-                    Aux.Id = Leer.GetInt32(0);
-                    Aux.Codigo = Leer.GetString(1);
-                    Aux.Nombre = Leer.GetString(2);
-                    Aux.Descripcion = Leer.GetString(3);
-                    Aux.Marca = new Marca();
-                    Aux.Marca.Nombre = Leer.GetString(4);
-                    Aux.Categoria = new Categoria();
-                    Aux.Categoria.Nombre = Leer.GetString(5);
-                    Aux.UrlImagen = Leer.GetString(6);
+                    Art.Id = Leeme.GetInt32(0);
+                    Art.Codigo = Leeme.GetString(1);
+                    Art.Nombre = Leeme.GetString(2);
+                    Art.Descripcion = Leeme.GetString(3);
 
-                    Aux.Precio = (double)Leer.GetDecimal(7);
+                    Art.Marca = new Marca();
+                    Art.Marca.Nombre = Leeme.GetString(4);
 
-                    Listado.Add(Aux);
 
+                    Listado.Add(Art);
                 }
 
                 return Listado;
@@ -58,11 +53,12 @@ namespace Negocio
 
                 throw ex;
             }
+
             finally
             {
                 Conexion.Close();
             }
-         
+
         }
     }
 }

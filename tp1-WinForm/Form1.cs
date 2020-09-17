@@ -23,27 +23,11 @@ namespace tp1_WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CargarDrigView();
-        }
-
-        private void CargarDrigView()
-        {
             NegocioArticulo Negocio = new NegocioArticulo();
-
-            try
-            {
-               
-                //DgvArticulos.DataSource = Negocio.Listar();
-                
-
-                
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            DgvArticulos.DataSource = Negocio.Listar();
 
         }
+
+        
     }
 }

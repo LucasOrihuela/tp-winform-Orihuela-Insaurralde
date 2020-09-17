@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.DgvArticulos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DgvArticulos
-            // 
-            this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulos.Location = new System.Drawing.Point(12, 12);
-            this.DgvArticulos.Name = "DgvArticulos";
-            this.DgvArticulos.Size = new System.Drawing.Size(487, 425);
-            this.DgvArticulos.TabIndex = 0;
             // 
             // btnListar
             // 
@@ -85,16 +77,24 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
+            // DgvArticulos
+            // 
+            this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvArticulos.Location = new System.Drawing.Point(12, 29);
+            this.DgvArticulos.Name = "DgvArticulos";
+            this.DgvArticulos.Size = new System.Drawing.Size(507, 385);
+            this.DgvArticulos.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DgvArticulos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.DgvArticulos);
             this.Name = "Form1";
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -104,12 +104,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DgvArticulos;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView DgvArticulos;
     }
 }
 
