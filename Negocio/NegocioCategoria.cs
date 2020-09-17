@@ -10,13 +10,32 @@ namespace Negocio
 {
     public class NegocioCategoria
     {
-        SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS; initial catalog=CATALOG_DB;integrated security=sspi");
+        public List<Categoria> Listar()
+        {
+
+        SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
         SqlCommand comando = new SqlCommand();
+        List<Categoria> Listado = new List<Categoria> ();
         SqlDataReader lector;
        
-        conexion.sqlconnection = "";
-        comando.commandType = System.Data.CommandType.text;
-        comando.commandtext = "select * from categorias";
+        comando.CommandType = System.Data.CommandType.Text;
+        comando.CommandText = "select * from categorias";
+        comando.Connection = conexion;
+
+        conexion.Open();
+        lector = comando.ExecuteReader();
+        while(lector.Read())
+            {
+                Categoria aux = new Categoria();
+                aux.Nombre = lector.GetString(1);
+
+                Listado.Add(aux);
+            }
+            lector.Close();
+        conexion.Close();
+        return Listado;
+
+        }
 
 
     }
