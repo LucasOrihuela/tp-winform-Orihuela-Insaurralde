@@ -62,5 +62,17 @@ namespace Negocio
             }
 
         }
+
+        public void agregar(Articulo nuevo)
+        {
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+            SqlCommand comando = new SqlCommand();
+
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = "insert into CATALOGO_DB (codigo,Descripcion,Imagen,Precio) values ('"+ nuevo.Codigo +"','"+nuevo.Descripcion +"','"+nuevo.UrlImagen+"','"+nuevo.Precio+"')";
+            comando.Connection = conexion;
+
+            conexion.Open();
+        }
     }
 }

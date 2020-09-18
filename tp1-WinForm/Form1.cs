@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security;
 
 namespace tp1_WinForm
 {
@@ -28,6 +29,10 @@ namespace tp1_WinForm
 
         }
 
-        
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

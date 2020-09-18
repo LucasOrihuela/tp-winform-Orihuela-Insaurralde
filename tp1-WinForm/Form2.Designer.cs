@@ -54,6 +54,7 @@
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -201,6 +202,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Name = "Form2";
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
