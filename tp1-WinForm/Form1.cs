@@ -29,10 +29,14 @@ namespace tp1_WinForm
 
         }
 
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            
 
+            Form AbrirForm2 = new Form2();
+
+            AbrirForm2.ShowDialog();
         }
     }
 }

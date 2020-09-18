@@ -31,7 +31,7 @@ namespace Negocio
 
                 Listado.Add(aux);
             }
-            lector.Close();
+            
         conexion.Close();
         return Listado;
 

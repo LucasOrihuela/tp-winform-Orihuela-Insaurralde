@@ -23,20 +23,46 @@ namespace tp1_WinForm
         {
             Articulo nuevo = new Articulo();
             NegocioArticulo negocio = new NegocioArticulo();
-            nuevo.Codigo = txtCodigo.Text;
-            nuevo.Nombre = txtNombre.Text;
-            nuevo.Descripcion = txtDescripcion.Text;
-            nuevo.Marca = cbMarca;
-            nuevo.Categoria = cbCategoria;
-            nuevo.UrlImagen = txtImagen.Text;
-            nuevo.Precio = Convert.ToDouble(txtPrecio.Text);
 
-            negocio.agregar(nuevo);
+            try
+            {
+                nuevo.Codigo = txtCodigo.Text;
+                nuevo.Nombre = txtNombre.Text;
+                nuevo.Descripcion = txtDescripcion.Text;
+                nuevo.Marca = (Marca)cbMarca.SelectedItem;
+                nuevo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                nuevo.UrlImagen = txtImagen.Text;
+                nuevo.Precio = double.Parse(txtPrecio.Text);
+
+                negocio.agregar(nuevo);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            NegocioCategoria NegocioCategoria = new NegocioCategoria();
+            NegocioMarca NegocioMarca = new NegocioMarca();
 
+            try
+            {
+                cbMarca.DataSource = NegocioMarca.Listar();
+                cbMarca.ValueMember = "IdMarca";
+                cbMarca.DisplayMember = "Nombre";
+
+                cbCategoria.DataSource = NegocioCategoria.Listar();
+                cbCategoria.ValueMember = "IdCategoria";
+                cbCategoria.DisplayMember = "Nombre";
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

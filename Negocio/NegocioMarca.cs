@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Negocio
 {
-    class NegocioMarca
+    public class NegocioMarca
     {
         public List<Marca> Listar()
         {
