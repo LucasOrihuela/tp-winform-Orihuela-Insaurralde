@@ -15,6 +15,8 @@ namespace Negocio
         {
 
             //// Cambiar Ruta de Conexion.
+            /// Insaurralde 819VH7M
+
 
             SqlConnection Conexion = new SqlConnection("data source=DESKTOP-819VH7M\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi");
             List<Articulo> Listado = new List<Articulo>();

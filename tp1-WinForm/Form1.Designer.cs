@@ -39,7 +39,7 @@
             // btnListar
             // 
             this.btnListar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListar.Location = new System.Drawing.Point(540, 29);
+            this.btnListar.Location = new System.Drawing.Point(765, 260);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(169, 34);
             this.btnListar.TabIndex = 1;
@@ -49,7 +49,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.Location = new System.Drawing.Point(540, 88);
+            this.btnAgregar.Location = new System.Drawing.Point(765, 300);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(169, 34);
             this.btnAgregar.TabIndex = 2;
@@ -59,7 +59,7 @@
             // btnModificar
             // 
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.Location = new System.Drawing.Point(540, 147);
+            this.btnModificar.Location = new System.Drawing.Point(765, 340);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(169, 34);
             this.btnModificar.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.Location = new System.Drawing.Point(540, 208);
+            this.btnEliminar.Location = new System.Drawing.Point(765, 380);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(169, 34);
             this.btnEliminar.TabIndex = 4;
@@ -82,14 +82,14 @@
             this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvArticulos.Location = new System.Drawing.Point(12, 29);
             this.DgvArticulos.Name = "DgvArticulos";
-            this.DgvArticulos.Size = new System.Drawing.Size(507, 385);
+            this.DgvArticulos.Size = new System.Drawing.Size(747, 385);
             this.DgvArticulos.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(946, 450);
             this.Controls.Add(this.DgvArticulos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
