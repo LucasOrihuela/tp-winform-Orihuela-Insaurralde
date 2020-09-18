@@ -27,6 +27,8 @@ namespace tp1_WinForm
             NegocioArticulo Negocio = new NegocioArticulo();
             DgvArticulos.DataSource = Negocio.Listar();
 
+            DgvArticulos.Columns[0].Visible = false;
+            DgvArticulos.Columns[6].Visible = false;
         }
 
 
@@ -37,6 +39,23 @@ namespace tp1_WinForm
             Form AbrirForm2 = new Form2();
 
             AbrirForm2.ShowDialog();
+        }
+
+        private void DgvArticulos_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Articulo MostrarFoto;
+
+                MostrarFoto = (Articulo)DgvArticulos.CurrentRow.DataBoundItem;
+
+                PicArticulo.Load(MostrarFoto.UrlImagen);
+
+            }
+            catch (Exception)
+            {
+                PicArticulo.Load("https://serv3.raiolanetworks.es/blog/wp-content/uploads/error-500-768x499.png");
+            }
         }
     }
 }

@@ -44,6 +44,12 @@ namespace Negocio
                     Art.Marca = new Marca();
                     Art.Marca.Nombre = Leeme.GetString(4);
 
+                    Art.Categoria = new Categoria();
+                    Art.Categoria.Nombre = Leeme.GetString(5);
+
+                    Art.UrlImagen = Leeme.GetString(6);
+
+                    Art.Precio = (double)Leeme.GetDecimal(7);
 
                     Listado.Add(Art);
                 }
