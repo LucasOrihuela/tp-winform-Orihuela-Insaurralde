@@ -29,8 +29,8 @@ namespace tp1_WinForm
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
-                nuevo.Marca = (Marca)cbMarca.SelectedItem;
-                nuevo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                //nuevo.Marca = (Marca)cbMarca.SelectedItem;
+                //nuevo.Categoria = (Categoria)cbCategoria.SelectedItem;
                 nuevo.UrlImagen = txtImagen.Text;
                 nuevo.Precio = double.Parse(txtPrecio.Text);
 

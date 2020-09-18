@@ -55,7 +55,10 @@ namespace tp1_WinForm
             catch (Exception)
             {
                 PicArticulo.Load("https://serv3.raiolanetworks.es/blog/wp-content/uploads/error-500-768x499.png");
+
             }
+
+         
         }
     }
 }
