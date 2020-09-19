@@ -69,5 +69,19 @@ namespace tp1_WinForm
 
          
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo Cambiar;
+
+            Cambiar = (Articulo)DgvArticulos.CurrentRow.DataBoundItem;
+
+            Form2 Modificar = new Form2(Cambiar);
+            Modificar.Text = "Modificar";
+            Modificar.ShowDialog();
+
+            CargarDatos();
+
+        }
     }
 }

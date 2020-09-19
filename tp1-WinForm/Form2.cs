@@ -14,29 +14,40 @@ namespace tp1_WinForm
 {
     public partial class Form2 : Form
     {
+        private Articulo articulo = null;
+
         public Form2()
         {
             InitializeComponent();
         }
 
+        public Form2(Articulo Modificar)
+        {
+
+            InitializeComponent();
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Articulo nuevo = new Articulo();
+            
             NegocioArticulo negocio = new NegocioArticulo();
 
             try
             {
-                nuevo.Codigo = txtCodigo.Text;
-                nuevo.Nombre = txtNombre.Text;
-                nuevo.Descripcion = txtDescripcion.Text;
-                nuevo.Marca = (Marca)cbMarca.SelectedItem;
-                nuevo.Categoria = (Categoria)cbCategoria.SelectedItem;
-                nuevo.UrlImagen = txtImagen.Text;
-                nuevo.Precio = double.Parse(txtPrecio.Text);
 
-                negocio.agregar(nuevo);
+                if (articulo == null) articulo = new Articulo();
 
-                MessageBox.Show("Articulo Agregado");
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.Marca = (Marca)cbMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                articulo.UrlImagen = txtImagen.Text;
+                articulo.Precio = double.Parse(txtPrecio.Text);
+
+                if (articulo.Id == 0) negocio.agregar(articulo);
+
+                else negocio.modificar(articulo);
 
                 this.Close();
             }
@@ -61,6 +72,19 @@ namespace tp1_WinForm
                 cbCategoria.DataSource = NegocioCategoria.Listar();
                 cbCategoria.ValueMember = "IdCategoria";
                 cbCategoria.DisplayMember = "Nombre";
+
+                if (articulo != null)
+                {
+                    txtCodigo.Text = articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    txtImagen.Text = articulo.UrlImagen;
+                    txtPrecio.Text = Convert.ToString(articulo.Precio);
+                    cbCategoria.SelectedValue = articulo.Categoria.IdCategoria;
+                    cbMarca.SelectedValue = articulo.Marca.IdMarca;
+
+                }
+
             }
             catch (Exception ex)
             {
