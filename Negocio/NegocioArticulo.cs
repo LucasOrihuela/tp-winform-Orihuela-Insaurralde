@@ -18,7 +18,7 @@ namespace Negocio
             /// Insaurralde 819VH7M
 
 
-            SqlConnection Conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESSS; initial catalog=CATALOGO_DB; integrated security=sspi");
+            SqlConnection Conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
             List<Articulo> Listado = new List<Articulo>();
             SqlCommand Comando = new SqlCommand();
             SqlDataReader Leeme;
@@ -83,9 +83,10 @@ namespace Negocio
                 SqlCommand Comando = new SqlCommand();
                 Comando.CommandType = System.Data.CommandType.Text;
 
-                Comando.CommandText = "update ARTICULOS set Codigo=@codigo, Nombre=@nombre, Descripcion=@descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, ImagenUrl=@ImagenUrl, precio=@Precio where Id=@id)";
+                Comando.CommandText = "update ARTICULOS set Codigo=@codigo, Nombre=@nombre, Descripcion=@descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, ImagenUrl=@ImagenUrl, precio=@Precio where Id=@Id";
                 Comando.Connection = conexion;
 
+                Comando.Parameters.AddWithValue("@Id", articulo.Id);
                 Comando.Parameters.AddWithValue("@Codigo", articulo.Codigo);
                 Comando.Parameters.AddWithValue("@Nombre", articulo.Nombre);
                 Comando.Parameters.AddWithValue("@Descripcion", articulo.Descripcion);
