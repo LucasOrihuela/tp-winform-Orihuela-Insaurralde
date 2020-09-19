@@ -25,6 +25,8 @@ namespace tp1_WinForm
         {
 
             InitializeComponent();
+
+            articulo = Modificar;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -66,12 +68,15 @@ namespace tp1_WinForm
             try
             {
                 cbMarca.DataSource = NegocioMarca.Listar();
-                cbMarca.ValueMember = "IdMarca";
-                cbMarca.DisplayMember = "Nombre";
+                cbMarca.ValueMember = "Id";
+                cbMarca.DisplayMember = "NombreMarca";
+
+               
 
                 cbCategoria.DataSource = NegocioCategoria.Listar();
-                cbCategoria.ValueMember = "IdCategoria";
-                cbCategoria.DisplayMember = "Nombre";
+                cbCategoria.ValueMember = "Id";
+                cbCategoria.DisplayMember = "NombreCategoria";
+
 
                 if (articulo != null)
                 {
@@ -80,8 +85,8 @@ namespace tp1_WinForm
                     txtDescripcion.Text = articulo.Descripcion;
                     txtImagen.Text = articulo.UrlImagen;
                     txtPrecio.Text = Convert.ToString(articulo.Precio);
-                    cbCategoria.SelectedValue = articulo.Categoria.IdCategoria;
-                    cbMarca.SelectedValue = articulo.Marca.IdMarca;
+                    cbMarca.SelectedValue = articulo.Marca.Id;
+                    cbCategoria.SelectedValue = articulo.Categoria.Id;
 
                 }
 

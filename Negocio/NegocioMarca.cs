@@ -28,8 +28,8 @@ namespace Negocio
             {
                 Marca aux = new Marca();
 
-                aux.IdMarca = lector.GetInt32(0);
-                aux.Nombre = lector.GetString(1);
+                aux.Id = lector.GetInt32(0);
+                aux.NombreMarca = lector.GetString(1);
 
                 Listado.Add(aux);
             }

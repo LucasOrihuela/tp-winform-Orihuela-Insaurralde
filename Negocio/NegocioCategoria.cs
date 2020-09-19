@@ -28,8 +28,8 @@ namespace Negocio
             {
                 Categoria aux = new Categoria();
 
-                aux.IdCategoria = lector.GetInt32(0);
-                aux.Nombre = lector.GetString(1);
+                aux.Id = lector.GetInt32(0);
+                aux.NombreCategoria = lector.GetString(1);
 
                 Listado.Add(aux);
             }

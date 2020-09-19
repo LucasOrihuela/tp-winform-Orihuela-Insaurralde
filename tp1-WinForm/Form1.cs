@@ -75,7 +75,7 @@ namespace tp1_WinForm
             Articulo Cambiar;
 
             Cambiar = (Articulo)DgvArticulos.CurrentRow.DataBoundItem;
-
+    
             Form2 Modificar = new Form2(Cambiar);
             Modificar.Text = "Modificar";
             Modificar.ShowDialog();

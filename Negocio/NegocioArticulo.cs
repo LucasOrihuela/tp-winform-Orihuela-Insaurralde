@@ -26,7 +26,7 @@ namespace Negocio
             try
             {
                 Comando.CommandType = System.Data.CommandType.Text;
-                Comando.CommandText = "select P.Id, P.Codigo,P.Nombre, P.Descripcion, M.Descripcion[Marca], C.Descripcion[Categoria], P.ImagenUrl,P.Precio from ARTICULOS P, MARCAS M, CATEGORIAS C where P.IdMarca = m.Id AND P.IdCategoria = C.Id";
+                Comando.CommandText = "select P.Id, P.Codigo,P.Nombre, P.Descripcion, M.Descripcion[Marca], C.Descripcion[Categoria], P.ImagenUrl,P.Precio,M.Id, C.Id from ARTICULOS P, MARCAS M, CATEGORIAS C where P.IdMarca = m.Id AND P.IdCategoria = C.Id";
                 Comando.Connection = Conexion;
                 Conexion.Open();
 
@@ -42,14 +42,18 @@ namespace Negocio
                     Art.Descripcion = Leeme.GetString(3);
 
                     Art.Marca = new Marca();
-                    Art.Marca.Nombre = Leeme.GetString(4);
+                    Art.Marca.NombreMarca = Leeme.GetString(4);
 
                     Art.Categoria = new Categoria();
-                    Art.Categoria.Nombre = Leeme.GetString(5);
+                    Art.Categoria.NombreCategoria = Leeme.GetString(5);
+                    
 
                     Art.UrlImagen = Leeme.GetString(6);
 
                     Art.Precio = (double)Leeme.GetDecimal(7);
+
+                    Art.Marca.Id = Leeme.GetInt32(8);
+                    Art.Categoria.Id = Leeme.GetInt32(9);
 
                     Listado.Add(Art);
                 }
@@ -71,14 +75,30 @@ namespace Negocio
 
         public void modificar(Articulo articulo)
         {
+
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+
             try
             {
+                SqlCommand Comando = new SqlCommand();
+                Comando.CommandType = System.Data.CommandType.Text;
+
+                Comando.CommandText = "";
+                Comando.Connection = conexion;
+
+            
+                conexion.Open();
+                Comando.ExecuteNonQuery();
 
             }
             catch (Exception ex)
             {
 
                 throw ex;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 
@@ -98,8 +118,8 @@ namespace Negocio
                 comando.Parameters.AddWithValue("@Codigo",nuevo.Codigo);
                 comando.Parameters.AddWithValue("@Nombre", nuevo.Nombre);
                 comando.Parameters.AddWithValue("@Descripcion",nuevo.Descripcion);
-                comando.Parameters.AddWithValue("@IdMarca", nuevo.Marca.IdMarca);
-                comando.Parameters.AddWithValue("@IdCategoria",nuevo.Categoria.IdCategoria);
+                comando.Parameters.AddWithValue("@IdMarca", nuevo.Marca.Id);
+                comando.Parameters.AddWithValue("@IdCategoria",nuevo.Categoria.Id);
                 comando.Parameters.AddWithValue("@ImagenUrl", nuevo.UrlImagen);
                 comando.Parameters.AddWithValue("@Precio" , nuevo.Precio);
 
