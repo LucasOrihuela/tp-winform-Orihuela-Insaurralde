@@ -152,7 +152,7 @@ namespace Negocio
 
         public void eliminar(int id)
         {
-            SqlConnection conexion = new SqlConnection("data source = DESKTOP - OC9KSLQ\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi; ");
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi; ");
             try
             {
                 SqlCommand comando = new SqlCommand();
@@ -162,6 +162,9 @@ namespace Negocio
                 comando.Connection = conexion;
 
                 comando.Parameters.AddWithValue("@Id", id);
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
 
 
             }
