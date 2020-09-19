@@ -83,5 +83,12 @@ namespace tp1_WinForm
             CargarDatos();
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            NegocioArticulo Negocio = new NegocioArticulo();
+            Negocio.eliminar(((Articulo)DgvArticulos.CurrentRow.DataBoundItem).Id);
+            CargarDatos();
+        }
     }
 }

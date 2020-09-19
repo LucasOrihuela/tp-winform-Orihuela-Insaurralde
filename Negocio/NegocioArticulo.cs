@@ -148,5 +148,31 @@ namespace Negocio
             
             
         }
+
+        public void eliminar(int id)
+        {
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP - OC9KSLQ\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi; ");
+            try
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "delete from ARTICULOS where id=@id";
+                comando.Parameters.Clear();
+                comando.Connection = conexion;
+
+                comando.Parameters.AddWithValue("@Id", id);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
     }
 }
