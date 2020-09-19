@@ -18,7 +18,7 @@ namespace Negocio
             /// Insaurralde 819VH7M
 
 
-            SqlConnection Conexion = new SqlConnection("data source=DESKTOP-819VH7M\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi");
+            SqlConnection Conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESSS; initial catalog=CATALOGO_DB; integrated security=sspi");
             List<Articulo> Listado = new List<Articulo>();
             SqlCommand Comando = new SqlCommand();
             SqlDataReader Leeme;
@@ -76,17 +76,24 @@ namespace Negocio
         public void modificar(Articulo articulo)
         {
 
-            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
 
             try
             {
                 SqlCommand Comando = new SqlCommand();
                 Comando.CommandType = System.Data.CommandType.Text;
 
-                Comando.CommandText = "";
+                Comando.CommandText = "update ARTICULOS set Codigo=@codigo, Nombre=@nombre, Descripcion=@descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, ImagenUrl=@ImagenUrl, precio=@Precio where Id=@id)";
                 Comando.Connection = conexion;
 
-            
+                Comando.Parameters.AddWithValue("@Codigo", articulo.Codigo);
+                Comando.Parameters.AddWithValue("@Nombre", articulo.Nombre);
+                Comando.Parameters.AddWithValue("@Descripcion", articulo.Descripcion);
+                Comando.Parameters.AddWithValue("@IdMarca", articulo.Marca.Id);
+                Comando.Parameters.AddWithValue("@IdCategoria", articulo.Categoria.Id);
+                Comando.Parameters.AddWithValue("@ImagenUrl", articulo.UrlImagen);
+                Comando.Parameters.AddWithValue("@Precio", articulo.Precio);
+
                 conexion.Open();
                 Comando.ExecuteNonQuery();
 
@@ -104,7 +111,7 @@ namespace Negocio
 
         public void agregar(Articulo nuevo)
         {
-            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
             
             try
             {

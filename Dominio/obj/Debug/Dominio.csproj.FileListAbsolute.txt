@@ -16,3 +16,9 @@ C:\Users\matia\OneDrive\Escritorio\Trabajo Practico\tp1-Orihuela-Insaurralde\Dom
 C:\Users\matia\OneDrive\Escritorio\Trabajo Practico\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\matia\OneDrive\Escritorio\Trabajo Practico\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.dll
 C:\Users\matia\OneDrive\Escritorio\Trabajo Practico\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Dominio\bin\Debug\Dominio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.dll
+C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Dominio\obj\Debug\Dominio.pdb

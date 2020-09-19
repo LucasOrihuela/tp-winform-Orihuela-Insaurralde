@@ -13,7 +13,7 @@ namespace Negocio
         public List<Categoria> Listar()
         {
 
-        SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+        SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
         SqlCommand comando = new SqlCommand();
         List<Categoria> Listado = new List<Categoria> ();
         SqlDataReader lector;
