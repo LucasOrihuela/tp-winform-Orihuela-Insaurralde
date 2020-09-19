@@ -27,6 +27,8 @@ namespace Negocio
         while(lector.Read())
             {
                 Categoria aux = new Categoria();
+
+                aux.IdCategoria = lector.GetInt32(0);
                 aux.Nombre = lector.GetString(1);
 
                 Listado.Add(aux);

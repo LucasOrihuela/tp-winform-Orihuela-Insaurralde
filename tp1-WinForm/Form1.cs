@@ -24,13 +24,20 @@ namespace tp1_WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CargarDatos();
+        }
+
+
+        private void CargarDatos()
+        {
             NegocioArticulo Negocio = new NegocioArticulo();
             DgvArticulos.DataSource = Negocio.Listar();
 
             DgvArticulos.Columns[0].Visible = false;
             DgvArticulos.Columns[6].Visible = false;
-        }
 
+
+        }
 
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -39,6 +46,8 @@ namespace tp1_WinForm
             Form AbrirForm2 = new Form2();
 
             AbrirForm2.ShowDialog();
+
+            CargarDatos();
         }
 
         private void DgvArticulos_MouseClick(object sender, MouseEventArgs e)
