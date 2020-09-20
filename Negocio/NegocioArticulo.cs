@@ -17,7 +17,7 @@ namespace Negocio
             //// Cambiar Ruta de Conexion en NegocioArticulo, NegocioCategoria y NegocioMarca.
             /// Insaurralde 819VH7M
             /// 
-            SqlConnection Conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+            SqlConnection Conexion = new SqlConnection("data source =DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
             List<Articulo> Listado = new List<Articulo>();
             SqlCommand Comando = new SqlCommand();
             SqlDataReader Leeme;
@@ -75,7 +75,7 @@ namespace Negocio
         public void modificar(Articulo articulo)
         {
 
-            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+            SqlConnection conexion = new SqlConnection("data source =DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
 
             try
             {
@@ -111,7 +111,7 @@ namespace Negocio
 
         public void agregar(Articulo nuevo)
         {
-            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
+            SqlConnection conexion = new SqlConnection("data source =DESKTOP-OC9KSLQ\\SQLEXPRESS;initial catalog = CATALOGO_DB;integrated security = sspi;");
             
             try
             {
@@ -151,7 +151,7 @@ namespace Negocio
 
         public void eliminar(int id)
         {
-            SqlConnection conexion = new SqlConnection("data source = DESKTOP-819VH7M\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi; ");
+            SqlConnection conexion = new SqlConnection("data source = DESKTOP-OC9KSLQ\\SQLEXPRESS; initial catalog = CATALOGO_DB; integrated security = sspi; ");
             try
             {
                 SqlCommand comando = new SqlCommand();
@@ -177,5 +177,6 @@ namespace Negocio
                 conexion.Close();
             }
         }
+
     }
 }

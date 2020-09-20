@@ -37,6 +37,9 @@ namespace tp1_WinForm
 
             try
             {
+                if (ValidarTextBox())
+                {
+
 
                 if (articulo == null) articulo = new Articulo();
 
@@ -53,6 +56,8 @@ namespace tp1_WinForm
                 else negocio.modificar(articulo);
 
                 this.Close();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -102,6 +107,18 @@ namespace tp1_WinForm
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public bool ValidarTextBox()
+        {
+            if (txtCodigo.Text.Length == 0) return false;
+            if (txtNombre.Text.Length == 0) return false;
+            if (txtDescripcion.Text.Length == 0) return false;
+            if (cbMarca.SelectedIndex < 0) return false;
+            if (cbCategoria.SelectedIndex < 0) return false;
+            if (txtImagen.Text.Length == 0) return false;
+            if (txtPrecio.Text.Length == 0) return false;
+            return true;
         }
     }
 }
