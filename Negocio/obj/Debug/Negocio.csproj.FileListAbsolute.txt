@@ -34,3 +34,12 @@ C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurral
 C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Negocio\obj\Debug\Negocio.dll
 C:\Users\Lucas\Desktop\ClonadoGIT\Programacion3\TpWinform\tp1-Orihuela-Insaurralde\Negocio\obj\Debug\Negocio.pdb
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\bin\Debug\Negocio.dll
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\bin\Debug\Negocio.pdb
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\bin\Debug\Dominio.dll
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\bin\Debug\Dominio.pdb
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\obj\Debug\Negocio.dll
+C:\Users\matia\OneDrive\Escritorio\Tp\Negocio\obj\Debug\Negocio.pdb

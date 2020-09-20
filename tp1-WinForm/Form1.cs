@@ -15,7 +15,7 @@ namespace tp1_WinForm
 {
     public partial class Form1 : Form
     {
-
+        private List<Articulo> Lista;
        
         public Form1()
         {
@@ -30,7 +30,13 @@ namespace tp1_WinForm
 
         private void CargarDatos()
         {
+            
+            
+
             NegocioArticulo Negocio = new NegocioArticulo();
+
+            Lista = Negocio.Listar();
+
             DgvArticulos.DataSource = Negocio.Listar();
 
             DgvArticulos.Columns[0].Visible = false;
@@ -89,6 +95,23 @@ namespace tp1_WinForm
             NegocioArticulo Negocio = new NegocioArticulo();
             Negocio.eliminar(((Articulo)DgvArticulos.CurrentRow.DataBoundItem).Id);
             CargarDatos();
+        }
+
+        private void TxtFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> Articulo;
+
+            try
+            {
+                if (TxtFiltro.Text == "") Articulo = Lista;
+                else Articulo = Lista.FindAll(J => J.Nombre.ToLower().Contains(TxtFiltro.Text.ToLower())); DgvArticulos.DataSource = Articulo;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

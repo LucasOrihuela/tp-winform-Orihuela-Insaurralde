@@ -29,6 +29,7 @@ namespace tp1_WinForm
             articulo = Modificar;
         }
 
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             

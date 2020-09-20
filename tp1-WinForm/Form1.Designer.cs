@@ -33,6 +33,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.DgvArticulos = new System.Windows.Forms.DataGridView();
             this.PicArticulo = new System.Windows.Forms.PictureBox();
+            this.TxtFiltro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicArticulo)).BeginInit();
             this.SuspendLayout();
@@ -74,27 +75,36 @@
             // DgvArticulos
             // 
             this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulos.Location = new System.Drawing.Point(38, 29);
+            this.DgvArticulos.Location = new System.Drawing.Point(38, 32);
             this.DgvArticulos.Name = "DgvArticulos";
             this.DgvArticulos.ReadOnly = true;
-            this.DgvArticulos.Size = new System.Drawing.Size(644, 385);
+            this.DgvArticulos.Size = new System.Drawing.Size(644, 364);
             this.DgvArticulos.TabIndex = 5;
             this.DgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DgvArticulos_MouseClick);
             // 
             // PicArticulo
             // 
-            this.PicArticulo.Location = new System.Drawing.Point(728, 29);
+            this.PicArticulo.Location = new System.Drawing.Point(728, 76);
             this.PicArticulo.Name = "PicArticulo";
             this.PicArticulo.Size = new System.Drawing.Size(206, 200);
             this.PicArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicArticulo.TabIndex = 6;
             this.PicArticulo.TabStop = false;
             // 
+            // TxtFiltro
+            // 
+            this.TxtFiltro.Location = new System.Drawing.Point(728, 32);
+            this.TxtFiltro.Name = "TxtFiltro";
+            this.TxtFiltro.Size = new System.Drawing.Size(206, 20);
+            this.TxtFiltro.TabIndex = 7;
+            this.TxtFiltro.TextChanged += new System.EventHandler(this.TxtFiltro_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 450);
+            this.Controls.Add(this.TxtFiltro);
             this.Controls.Add(this.PicArticulo);
             this.Controls.Add(this.DgvArticulos);
             this.Controls.Add(this.btnEliminar);
@@ -106,6 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicArticulo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -115,6 +126,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView DgvArticulos;
         private System.Windows.Forms.PictureBox PicArticulo;
+        private System.Windows.Forms.TextBox TxtFiltro;
     }
 }
 
